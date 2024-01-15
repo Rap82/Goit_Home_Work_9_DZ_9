@@ -102,53 +102,53 @@
 
 # ++++++++++++++++++++ Код / Code ++++++++++++++++++++++++++++++++++++
 
-def get_grade(key):
-    ''' Допоміжна функція за ключем *key , повертає значення з словника *grade.\
-        якщо вказати невіриний ключ поверне заначення *None.'''
+# def get_grade(key):
+#     ''' Допоміжна функція за ключем *key , повертає значення з словника *grade.\
+#         якщо вказати невіриний ключ поверне заначення *None.'''
 
-    grade = {"A": 5, "B": 5, "C": 4, "D": 3, "E": 3, "FX": 2, "F": 1}
-    return grade.get(key, None)
+#     grade = {"A": 5, "B": 5, "C": 4, "D": 3, "E": 3, "FX": 2, "F": 1}
+#     return grade.get(key, None)
 
 
-def get_description(key):
-    '''Допоміжна функція за ключем *key , повертає значення з словника *description.\
-        якщо вказати невіриний ключ поверне заначення *None.'''
+# def get_description(key):
+#     '''Допоміжна функція за ключем *key , повертає значення з словника *description.\
+#         якщо вказати невіриний ключ поверне заначення *None.'''
 
-    description = {
-        "A": "Perfectly",
-        "B": "Very good",
-        "C": "Good",
-        "D": "Satisfactorily",
-        "E": "Enough",
-        "FX": "Unsatisfactorily",
-        "F": "Unsatisfactorily",
-    }
-    return description.get(key, None)
+#     description = {
+#         "A": "Perfectly",
+#         "B": "Very good",
+#         "C": "Good",
+#         "D": "Satisfactorily",
+#         "E": "Enough",
+#         "FX": "Unsatisfactorily",
+#         "F": "Unsatisfactorily",
+#     }
+#     return description.get(key, None)
 
-def get_student_grade(option):
-    '''Основна функція приймає один аргумент *option, і якщо він містить змінні *get_description або *get_grade,
-        то повертає відповідні функції за іменем оголошених функції .
-        Оголошення функції відбувається після  оператора *def далі йде *імя_функції(*аргументи_або_без_аргументів).\
-        Якщо звертатись до функції тільки за її іменем , то повертає клас *<function *імя_функції at *область_памяті_OS> на який вказує імя , 
-        тобто локальний простір функції імя якої передаємо.
-        В нашому випадку перевіряємо що міститься в *option якщо воно задовільняє умови то повертаємо імя відповідної функції якщо ні повертаємо *None .'''
+# def get_student_grade(option):
+#     '''Основна функція приймає один аргумент *option, і якщо він містить змінні *get_description або *get_grade,
+#         то повертає відповідні функції за іменем оголошених функції .
+#         Оголошення функції відбувається після  оператора *def далі йде *імя_функції(*аргументи_або_без_аргументів).\
+#         Якщо звертатись до функції тільки за її іменем , то повертає клас *<function *імя_функції at *область_памяті_OS> на який вказує імя , 
+#         тобто локальний простір функції імя якої передаємо.
+#         В нашому випадку перевіряємо що міститься в *option якщо воно задовільняє умови то повертаємо імя відповідної функції якщо ні повертаємо *None .'''
                 
  
-    if option == get_description: # Перевірка чи *option = get_description
-        return get_description    # якщо виконалась умова *if option == get_description - поверне *<function get_description at 0x000001B3B7327F60>
+#     if option == get_description: # Перевірка чи *option = get_description
+#         return get_description    # якщо виконалась умова *if option == get_description - поверне *<function get_description at 0x000001B3B7327F60>
     
-    elif option == get_grade:     # Перевірка чи *option = get_grade
-        return get_grade          # якщо виконалась умова *elif option == get_grade - поверне *<function get_grade at 0x000001CB0CBF8A40>
-    else:
-       return None                # Поверне *None якщо жодна з попередніх умов невиконається .
+#     elif option == get_grade:     # Перевірка чи *option = get_grade
+#         return get_grade          # якщо виконалась умова *elif option == get_grade - поверне *<function get_grade at 0x000001CB0CBF8A40>
+#     else:
+#        return None                # Поверне *None якщо жодна з попередніх умов невиконається .
 
-# #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-key = "A" # Тестове значення.    
-option = get_description # Тестове значення  # *<function get_description at 0x000001B3B7327F60>
-option = get_grade  # Тестове значення  #  *<function get_grade at 0x000001CB0CBF8A40>
-option = "asd"  # Тестове значення # *None
+# # #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+# key = "A" # Тестове значення.    
+# option = get_description # Тестове значення  # *<function get_description at 0x000001B3B7327F60>
+# option = get_grade  # Тестове значення  #  *<function get_grade at 0x000001CB0CBF8A40>
+# option = "asd"  # Тестове значення # *None
 
-print(get_student_grade(option)) 
+# print(get_student_grade(option)) 
 
 # #+++++++++++++++++++++++ Для автоперевіки Код буде наступний +++++++++++++++++
 
